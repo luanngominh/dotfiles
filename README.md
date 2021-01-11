@@ -20,3 +20,9 @@ go get -u -v github.com/haya14busa/gopkgs/cmd/gopkgs
 go get -u -v github.com/josharian/impl
 go get -u -v github.com/rogpeppe/godef
 ```
+
+# ZSH
+## Install Oh My Zsh
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
