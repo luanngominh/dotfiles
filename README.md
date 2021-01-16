@@ -1,3 +1,11 @@
+# ZSH
+## Install Oh My Zsh
+* Install zsh
+* Install oh my zsh
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 # Spacemacs
 ## Install zsh-autosuggestions (shell Oh My ZSH)
 ```shell
@@ -19,10 +27,4 @@ go get -u -v github.com/godoctor/godoctor
 go get -u -v github.com/haya14busa/gopkgs/cmd/gopkgs
 go get -u -v github.com/josharian/impl
 go get -u -v github.com/rogpeppe/godef
-```
-
-# ZSH
-## Install Oh My Zsh
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```

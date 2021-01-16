@@ -4,22 +4,19 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ngominhluan/.oh-my-zsh"
 
-
-eval "$(starship init zsh)"
-
-export PATH=$PATH:~/go/bin
+# Define some env for go programing lang
 export GO111MODULE=on
+export GOPATH=~/go
+export GOBIN=~/go/bin
+export PATH=$PATH:$GOBIN:~/go/bin
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
 ZSH_THEME="robbyrussell"
 ZSH_DISABLE_COMPFIX="true"
-
-export GOPATH=~/go
-export GOBIN=~/go/bin
-export PATH=$PATH:$GOBIN
-alias c="clear"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -80,15 +77,16 @@ alias c="clear"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-git
-cargo
-aws
-colorize
-docker
-golang
-gcloud
-rust
-zsh-autosuggestions
+    git
+    cargo
+    aws
+    colorize
+    docker
+    golang
+    gcloud
+    rust
+    zsh-autosuggestions
+    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -110,12 +108,10 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Define some alias
+alias c="clear"
+alias g="git"
+alias l="ls"
 
+# Init star ship zsh mode
+eval "$(starship init zsh)"
