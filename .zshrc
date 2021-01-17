@@ -2,7 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/ngominhluan/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+
+export SHELL="vim"
 
 # Define some env for go programing lang
 export GO111MODULE=on
