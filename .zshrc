@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export SHELL="vim"
+export EDITOR="vim"
 
 # Define some env for go programing lang
 export GO111MODULE=on
