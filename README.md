@@ -1,3 +1,7 @@
+# Update dot file script
+* Add dot file from local to git: ./update.sh commit
+* Add dot file from git to local: ./update.sh local
+
 # ZSH
 ## Install Oh My Zsh
 * Install zsh
