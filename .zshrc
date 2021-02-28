@@ -2,15 +2,19 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-export EDITOR="vim"
+export ZSH="/Users/ngominhluan/.oh-my-zsh"
 
 # Define some env for go programing lang
 export GO111MODULE=on
 export GOPATH=~/go
 export GOBIN=~/go/bin
-export PATH=$PATH:$GOBIN:~/go/bin
+
+export GCLOUD_BIN=/usr/local/google-cloud-sdk/bin
+
+# export GOOGLE_APPLICATION_CREDENTIALS=~/.terraform-admin.json
+
+# Add some location to path
+export PATH=$PATH:$GOBIN:~/go/bin:$GCLOUD_BIN
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -86,6 +90,7 @@ plugins=(
     docker
     golang
     gcloud
+    kubectl
     rust
     zsh-autosuggestions
     vi-mode
@@ -114,6 +119,15 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias g="git"
 alias l="ls"
+alias gcp_container_revoke="rm -f ~/.kube/config"
+alias k=kubectl
 
 # Init star ship zsh mode
 eval "$(starship init zsh)"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/usr/local/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/usr/local/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/completion.zsh.inc'; fi
