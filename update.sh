@@ -10,6 +10,8 @@ case $1 in
 
       echo "cp ~/.zshrc .zshrc"
       cp ~/.zshrc .zshrc
+
+      cp ~/.config/starship.toml starship.toml
 	;;
 
 	local)
@@ -18,6 +20,9 @@ case $1 in
 
       echo "cp .zshrc ~/.zshrc"
       cp .zshrc ~/.zshrc
+
+      echo "cp starship.toml ~/.config/starship.toml"
+      cp starship.toml ~/.config/starship.toml
 	;;
 
 	*)
