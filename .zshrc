@@ -11,7 +11,7 @@ export GOBIN=~/go/bin
 
 export GCLOUD_BIN=/usr/local/google-cloud-sdk/bin
 
-# export GOOGLE_APPLICATION_CREDENTIALS=~/.terraform-admin.json
+export GOOGLE_APPLICATION_CREDENTIALS=~/.terraform-admin.json
 
 # Add some location to path
 export PATH=$PATH:$GOBIN:~/go/bin:$GCLOUD_BIN
@@ -121,6 +121,10 @@ alias g="git"
 alias l="ls"
 alias gcp_container_revoke="rm -f ~/.kube/config"
 alias k=kubectl
+alias g=gcloud
+alias d=docker
+alias dco=docker-compose
+alias kz=kustomize
 
 # Init star ship zsh mode
 eval "$(starship init zsh)"
