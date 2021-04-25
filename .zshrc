@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/ngominhluan/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Define some env for go programing lang
 export GO111MODULE=on
@@ -117,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Define some alias
 alias c="clear"
+alias cc="clear"
 alias g="git"
 alias l="ls"
 alias gcp_container_revoke="rm -f ~/.kube/config"
@@ -125,6 +126,7 @@ alias g=gcloud
 alias d=docker
 alias dco=docker-compose
 alias kz=kustomize
+alias kx=kubectx
 
 # Init star ship zsh mode
 eval "$(starship init zsh)"

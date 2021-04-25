@@ -3,6 +3,8 @@
 help="Type \"$0 commit\" or \"$0 local\""
 [[ $# != 1 ]] && echo $help && exit 0
 
+set -e
+
 case $1 in
 	commit)
 	    echo "cp ~/.spacemacs .spacemacs"
@@ -12,6 +14,7 @@ case $1 in
       cp ~/.zshrc .zshrc
 
       cp ~/.config/starship.toml starship.toml
+      cp ~/.oh-my-zsh/custom/key-binding.zsh .key-binding.zsh
 	;;
 
 	local)
@@ -23,6 +26,9 @@ case $1 in
 
       echo "cp starship.toml ~/.config/starship.toml"
       cp starship.toml ~/.config/starship.toml
+
+      echo "cp .key-binding.zsh ~/.oh-my-zsh/custom/key-binding.zsh"
+      cp .key-binding.zsh ~/.oh-my-zsh/custom/key-binding.zsh
 	;;
 
 	*)
