@@ -118,8 +118,10 @@ source $ZSH/oh-my-zsh.sh
 # Define some alias
 alias c="clear"
 alias cc="clear"
-alias g="git"
+alias gt="git"
 alias l="ls"
+alias h="helm"
+alias ap="ansible-playbook"
 alias gcp_container_revoke="rm -f ~/.kube/config"
 alias k=kubectl
 alias g=gcloud
@@ -127,6 +129,11 @@ alias d=docker
 alias dco=docker-compose
 alias kz=kustomize
 alias kx=kubectx
+
+if [[ `uname -s` = "Linux" ]]; then
+    alias pbcopy="xclip -selection clipboard"
+    alias pbpast="xclip -selection clipboard -o"
+fi
 
 # Init star ship zsh mode
 eval "$(starship init zsh)"
@@ -137,3 +144,4 @@ if [ -f '/usr/local/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/google-
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/usr/local/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/completion.zsh.inc'; fi
+
