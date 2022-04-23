@@ -7,14 +7,14 @@ export ZSH="${HOME}/.oh-my-zsh"
 # Define some env for go programing lang
 export GO111MODULE=on
 export GOPATH=~/go
-export GOBIN=~/go/bin
+export GOBIN=/usr/local/go/bin
 
 export GCLOUD_BIN=/usr/local/google-cloud-sdk/bin
 
 export GOOGLE_APPLICATION_CREDENTIALS=~/.terraform-admin.json
 
 # Add some location to path
-export PATH=$PATH:$GOBIN:~/go/bin:$GCLOUD_BIN
+export PATH=$PATH:$GOBIN:$GCLOUD_BIN:$GOPATH/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -118,10 +118,8 @@ source $ZSH/oh-my-zsh.sh
 # Define some alias
 alias c="clear"
 alias cc="clear"
-alias gt="git"
+alias g="git"
 alias l="ls"
-alias h="helm"
-alias ap="ansible-playbook"
 alias gcp_container_revoke="rm -f ~/.kube/config"
 alias k=kubectl
 alias g=gcloud
@@ -129,11 +127,6 @@ alias d=docker
 alias dco=docker-compose
 alias kz=kustomize
 alias kx=kubectx
-
-if [[ `uname -s` = "Linux" ]]; then
-    alias pbcopy="xclip -selection clipboard"
-    alias pbpast="xclip -selection clipboard -o"
-fi
 
 # Init star ship zsh mode
 eval "$(starship init zsh)"
@@ -145,3 +138,11 @@ if [ -f '/usr/local/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/google-
 # The next line enables shell command completion for gcloud.
 if [ -f '/usr/local/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/completion.zsh.inc'; fi
 
+luna() {
+  unset GOOGLE_APPLICATION_CREDENTIALS
+  unset KUBECONFIG
+  gcloud config configurations activate default
+  rm -f ~/.kube/config
+}
+
+eval $(thefuck --alias)
