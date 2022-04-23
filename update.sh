@@ -15,6 +15,8 @@ case $1 in
 
       cp ~/.config/starship.toml starship.toml
       cp ~/.oh-my-zsh/custom/key-binding.zsh .key-binding.zsh
+
+      cp ~/.alacritty.yml .alacritty.yml
 	;;
 
 	local)
@@ -29,6 +31,8 @@ case $1 in
 
       echo "cp .key-binding.zsh ~/.oh-my-zsh/custom/key-binding.zsh"
       cp .key-binding.zsh ~/.oh-my-zsh/custom/key-binding.zsh
+
+      cp .alacritty.yml ~/.alacritty.yml 
 	;;
 
 	*)
