@@ -118,7 +118,6 @@ source $ZSH/oh-my-zsh.sh
 # Define some alias
 alias c="clear"
 alias cc="clear"
-alias g="git"
 alias l="ls"
 alias gcp_container_revoke="rm -f ~/.kube/config"
 alias k=kubectl
@@ -127,6 +126,9 @@ alias d=docker
 alias dco=docker-compose
 alias kz=kustomize
 alias kx=kubectx
+alias gt=git
+alias h=helm
+alias f=fuck
 
 # Init star ship zsh mode
 eval "$(starship init zsh)"
