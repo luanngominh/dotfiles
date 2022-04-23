@@ -84,7 +84,7 @@ ZSH_DISABLE_COMPFIX="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    cargo
+    rust
     aws
     colorize
     docker
