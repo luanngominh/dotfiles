@@ -119,7 +119,7 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias cc="clear"
 alias l="ls"
-alias gcp_container_revoke="rm -f ~/.kube/config"
+alias k8s_revoke="rm -f ~/.kube/config"
 alias k=kubectl
 alias g=gcloud
 alias d=docker
@@ -147,4 +147,3 @@ luna() {
   rm -f ~/.kube/config
 }
 
-eval $(thefuck --alias)
