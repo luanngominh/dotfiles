@@ -13,8 +13,10 @@ export GCLOUD_BIN=/usr/local/google-cloud-sdk/bin
 
 export GOOGLE_APPLICATION_CREDENTIALS=~/.terraform-admin.json
 
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 # Add some location to path
-export PATH=$PATH:$GOBIN:$GCLOUD_BIN:$GOPATH/bin
+export PATH=$PATH:$GOBIN:$GCLOUD_BIN:$GOPATH/bin:/opt/homebrew/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
