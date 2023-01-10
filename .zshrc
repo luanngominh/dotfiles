@@ -149,3 +149,4 @@ luna() {
   rm -f ~/.kube/config
 }
 
+export FZF_COMPLETION_TRIGGER='oo'
