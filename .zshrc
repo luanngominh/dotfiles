@@ -145,8 +145,10 @@ if [ -f '/usr/local/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/g
 luna() {
   unset GOOGLE_APPLICATION_CREDENTIALS
   unset KUBECONFIG
+  unset AWS_PROFILE
   gcloud config configurations activate default
   rm -f ~/.kube/config
 }
 
-export FZF_COMPLETION_TRIGGER='oo'
+export FZF_COMPLETION_TRIGGER='lol'
+export AWS_PROFILE=''
